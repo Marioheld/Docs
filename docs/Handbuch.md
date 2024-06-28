@@ -77,7 +77,66 @@ Cert
 
 sudo apt-get install docker
 
+## Verwenden der Webanwendung
+**Mario Wegmann**
 
+### Unterseiten
+
+Nachdem die Anwendung gestartet wurde kann die Adresse im Browser eingegeben werden. Die Startseite zeigt das Menü für die Unterseiten an. Es gibt zwei Unterseiten, unter "Displays" werden alle bereits bekannten Displays aufgelistet. In der Unterseite "Assets" werden alle vorhanden Assets angezeigt.
+
+// TODO Grafik
+
+### Neues Asset erstellen
+
+Es gibt zwei Möglichkeiten ein Asset zu erstellen, es kann entweder ein fertiges PNG hochgeladen werden, oder ein PNG aus einem HTML Code erstellt werden. 
+
+// TODO Grafik
+
+
+**PNG hochladen**
+
+Ein PNG kann auf der Unterseite Assets über den "Hochladen"-Knopf hochgeladen werden. 
+Bei hochladen muss darauf geachtet werden, dass das PNG in der richtigen Auflösung für das Display ist, welches später das Asset anzeigen soll. Ebenso kann ein Name für das Asset und wie lange es angezeigt werden soll angegeben werden. Das hochladen beginnt mit einem Druck auf den "Hochladen"-Knopf.  
+
+// TODO Grafik
+
+**PNG aus HTML erstellen**
+Auf der Unterseite Assets gibt es auch den "Erstellen aus HTML"-Knopf, dieser öffnet ein Formular, in dem der Assetname, die Anzeigedauer und der HTML Code eingegeben werden kann. Nach dem druck auf den "Generieren"-Knopf wird ein PNG erstellt und lokal abgelegt. 
+
+
+// TODO Grafik
+
+### Vorhandenes Asset bearbeiten
+
+In der "Assets" Übersichtsseite kann jedes vorhandene Asset ausgewählt werden um eine Detailansicht anzuzeigen. Dort können der Name, die Anzeigedauer und der HTML Code bearbeitet werden. 
+Ebenso kann ein Asset auch gelöscht werden. 
+
+### Neues Displaymodul verbinden
+
+Beim erstmaligen einschalten eines Displaymoduls, nach dem flashen, kann in der Einrichtungsseite des Displaymoduls der Servermodus als Betriebsmodus ausgewählt werden. Ebenso kann die Server URL im dazugehörigen Textfeld angegeben werden. 
+
+Die weiteren Einstellungen verhalten sich gleich wie auch bei der Einrichtung vom Netzwerkmodus bereits erläutert wurde. 
+
+Nachdem die Erstkonfiguration gespeichert und das Displaymodul neu gestartet wurde, versucht es sich automatisch mit dem eingetragenen WLAN und anschlißend mit dem eingetragenen Server zu verbinden. 
+
+Falls das Displaymodul sich zum ersten mal mit diesem Server verbindet, wird es automatisch in der Datenbank eingetragen, anschließend geht das Display in den Deep-sleep Modus. 
+
+// TODO Grafik
+
+
+### Neues Asset auf dem Display anzeigen
+
+Sobald ein Displaymodul sich in der Webanwendung registriet hat, kann in der Webanwendung das Display ausgewählt werden. Hier können grundlegene Informationen zum Display bearbeitet und ein neues aktives Asset gesetz werden. 
+
+Mit einem Tastendruck auf den vorderseitigen Knopf, kann das Display aus dem Deep-sleep Modus wieder aufgeweckt werden. Immer nach dem Aufwecken versucht das Displaymodul sich mit dem Server zu verbinden und eine neue Konfiguration zu erhalten. Die Konfiguration enthält die URL des aktuell anzuzeigenden Assets und eine Dauer in Sekunden, die angiebt, wie lange das Asset angezeigt werden soll. 
+
+Das Displaymodul lädt anschließend das Asset von der angegebenen URL herunter, zeigt es an und versetzt sich anschließend wieder in den Deep-sleep Modus. Zusätzlich wird noch ein Wakeup Timer auf die angegebene Dauer gesetzt. Dieser Timer weckt somit das Displaymodul automatisch nach ablauf der Anzeigedauer auf, damit sich das Displaymodul ein neues anzuzeigendes Asset herunterlädt.  
+
+### Vorhandenes Display bearbeiten
+
+Ähnlich wie bei der Assets Übersicht, können auch die Displays in der "Display"-Unterseite bearbeitet werden. In der Detailansicht eines Displays kann die MAC-Adresse und der Zeitpunkt, zu dem sich das Display zum letzen mal beim Server gemeldet hat, eingesehen werden. Der Name des Displays und die Auflösung können bearbeitet werden. 
+
+Zuletzt kann ein Display auch wieder gelöscht werden. 
 
 ## Quellen
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux#generating-a-new-ssh-key 

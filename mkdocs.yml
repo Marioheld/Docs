@@ -65,7 +65,6 @@ plugins:
       exclude_pages:
         - 'about/'
 
-
 theme:
   name: material
   custom_dir: mkdocs-config/overrides

@@ -1,3 +1,7 @@
+---
+fontsize: 44pt
+---
+
 # Low Power Room Display
 
 ---
@@ -5,8 +9,9 @@
 <!-- Die Nummerierung wird automatisch für das Dokument erstellt, dabei ist es wichtig eine eindeutige ID festzulegen mit #ID -->
 
 <!-- So wird ein Bild angegeben -->
-<!-- Keyword "Figure:" <Bildunterschrift> -->
-Figure: Das ist ein Bild { #_fig_logo }
+
+<!-- Keyword "Figure:" Abbildung <Nummer>: <Bildunterschrift> -->
+Figure: Abbildung 2.1.1: Das ist ein Bild { #_fig_211 }
 
 ![](img/LPRD-Logo.svg){ width=30% }
 
