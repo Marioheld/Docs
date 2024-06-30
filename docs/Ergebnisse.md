@@ -1,7 +1,0 @@
-# Ergebnisse
-
-## Versuchsbeschreibung
-
-## Messergebnisse
-
-## Interpretation

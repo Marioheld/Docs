@@ -1,6 +1,5 @@
 # Einleitung
-
-_Jannis Gröger_
+**Jannis Gröger**
 
 ## Motivation
 <!-- Hinführen zum Thema, Leser interessieren -->
